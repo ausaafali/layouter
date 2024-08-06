@@ -1,0 +1,90 @@
+/* *{
+
+} */
+
+/* DEFAULT CLASSES */
+.outline-none {
+  outline: none !important;
+}
+.underliner {
+  text-decoration: none;
+}
+.underliner:hover {
+  text-decoration: underline;
+}
+.pointer {
+  cursor: pointer;
+}
+/* DEFAULT CLASSES */
+/* --------------------------------------------- */
+/* NAVBAR */
+body {
+  font-family: Arial, sans-serif;
+}
+
+.nav-under {
+  position: relative;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item {
+  margin: 0 15px;
+  cursor: pointer;
+  position: relative;
+}
+.menu-item > a {
+  color: #1b1b1b;
+  letter-spacing: 0.2em;
+  font-size: 11px;
+}
+
+.underline {
+  position: absolute;
+  bottom: 0;
+  height: 1px;
+  background-color: #1b1b1b;
+  width: 0;
+  transition: 0.5s ease;
+  transform: translateX(0);
+}
+.custom-navbar {
+  height: 80px;
+}
+.custom-navbar-collapse {
+  height: 100%;
+}
+.custom-navbar-collapse > nav,
+.custom-navbar-collapse > nav > ul {
+  height: 100%;
+}
+.navbar-input::placeholder {
+  font-size: 12px;
+  font-weight: 500;
+}
+.navbar-insta {
+    transition: transform 0.3s ease;
+}
+.navbar-input{
+    transition: all 0.2s ease;
+}
+.navbar-input:focus{
+    box-shadow: -5px 0px 5px rgba(0, 0, 0, 0.119);
+}
+.navbar-input:focus + .navbar-insta {
+  transform: translateX(2000%);
+}
+/* NAVBAR */
+/* --------------------------------------------- */
+/* INDEX */
+
+/* INDEX */
+/* --------------------------------------------- */
+
+/* --------------------------------------------- */
+/* --------------------------------------------- */
