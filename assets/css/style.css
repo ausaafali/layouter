@@ -15,17 +15,19 @@
 .pointer {
   cursor: pointer;
 }
-.fs-12px{
-    font-size: 12px;
+.fs-12px {
+  font-size: 12px;
 }
-.fs-14px{
-    font-size: 12px;
+.fs-14px {
+  font-size: 12px;
 }
 /* DEFAULT CLASSES */
 /* --------------------------------------------- */
 /* NAVBAR */
 body {
   font-family: Arial, sans-serif;
+  min-height: 100vh;
+  min-width: 100vw;
 }
 
 .nav-under {
@@ -58,8 +60,10 @@ body {
   transition: 0.5s ease;
   transform: translateX(0);
 }
-.custom-navbar {
-  height: 80px;
+@media (min-width: 992px) {
+  .custom-navbar {
+    height: 80px;
+  }
 }
 .custom-navbar-collapse {
   height: 100%;
@@ -87,7 +91,86 @@ body {
 /* NAVBAR */
 /* --------------------------------------------- */
 /* INDEX */
+@keyframes moveY {
+  from {
+    transform: translateY(100px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+@keyframes widthy {
+  from{
+    width: 0px;
+  }
+  to {
+    width: 30px;
+  }
+}
 
+.splide__slide {
+  position: relative;
+}
+
+/* .splide__slide img {
+  width: 100%;
+  height: auto;
+  } */
+.splide-inner-absolute {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+.caption {
+  /* position: absolute; */
+  /* bottom: 0; */
+  /* left: 0; */
+  transition: opacity 0.4s ease;
+  /* transition: moveY 0.4s ease; */
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), #00000000);
+  color: white;
+  padding: 10px;
+  opacity: 0;
+  min-height: 100px;
+  /* border-radius: 5px; */
+}
+/* ------------------------------------------------------- */
+.left-animate,.right-animate{
+  height: 1px;
+  background: #fff;
+  width: 30px;
+}
+.splide__slide.is-visible {
+  .caption {
+    opacity: 1 !important;
+  }
+  /* .caption>div>div>p,.caption>div>div>h2  {
+    animation: moveY 0.5s ease;
+  } */
+  .caption > div > .animate-1 > p{
+    animation: moveY 0.3s ease;
+  }
+  .caption > div > .animate-2 > h2{
+    animation: moveY 0.6s ease;
+  }
+  .caption > div > .animate-3 > p{
+    animation: moveY 0.9s ease;
+  }
+  .left-animate,.right-animate{
+    animation: widthy 0.5s ease;
+  }
+}
+  /* ------------------------------------------------------- */
+.splide:not(.is-overflow) .splide__list {
+  justify-content: center;
+}
+.caption p,
+.caption h2 {
+  margin: 0;
+}
+/* .splider-imger{
+  width: 600px;
+  height: 400px;
+} */
 /* INDEX */
 /* --------------------------------------------- */
 

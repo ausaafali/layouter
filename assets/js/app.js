@@ -3,6 +3,7 @@ addEventListener("DOMContentLoaded", () => {
   if (window.screen.width > 991) {
     const menuItems = document.querySelectorAll(".menu-item");
     const underline = document.querySelector(".underline");
+    console.log(window.screen.width);
 
     menuItems.forEach((item) => {
       item.addEventListener("mouseenter", (e) => {
@@ -17,4 +18,6 @@ addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+  //CLOSE NAV ON BODY
+    
 });
