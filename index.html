@@ -6,70 +6,81 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
     <!-- Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
-
-
 </head>
 
 <body class="">
     <!-- navbar -->
     <header>
-        <nav class="navbar navbar-expand-lg custom-navbar py-0">
-            <div class="container-fluid h-100" style="max-width: 1500px;">
-                <a class="navbar-brand" href="#!">
+        <nav class="navbar navbar-expand-lg custom-navbar bg-white py-0">
+            <div class="container-fluid  h-100" style="max-width: 1500px;">
+                <a class="navbar-brand" href="/">
                     <img src="assets/images/logo/logo.webp" alt="logo" width="100" height="50">
                 </a>
-                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                <!-- <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
+                </button> -->
+                <button class="d-lg-none navbar-toggler shadow-none p-0 border-0" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <svg class="ham hamRotate ham8" viewBox="0 0 100 100" width="50"
+                        onclick="this.classList.toggle('active')">
+                        <path class="line top"
+                            d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
+                        <path class="line middle" d="m 30,50 h 40" />
+                        <path class="line bottom"
+                            d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20" />
+                    </svg>
+
                 </button>
-                <div class="collapse navbar-collapse custom-navbar-collapse" id="collapsibleNavId">
+                <div class="collapse navbar-collapse custom-navbar-collapse ps-3 py-3 ps-lg-0 py-lg-0"
+                    id="collapsibleNavId">
                     <nav class="nav-under mx-auto">
                         <ul class="menu d-block d-lg-flex">
                             <li class="menu-item position-relative pointer mx-2 mx-xxl-3 align-content-center">
-                                <a href="#!" class="text-decoration-none text-uppercase">
+                                <a href="category-single.html" class="text-decoration-none text-uppercase">
                                     Holiday Sales
                                 </a>
                             </li>
                             <li class="menu-item position-relative pointer mx-2 mx-xxl-3 align-content-center">
-                                <a href="#!" class="text-decoration-none text-uppercase">
+                                <a href="category-single.html" class="text-decoration-none text-uppercase">
                                     Lifestyle
                                 </a>
                             </li>
                             <li class="menu-item position-relative pointer mx-2 mx-xxl-3 align-content-center">
-                                <a href="#!" class="text-decoration-none text-uppercase">
+                                <a href="category-single.html" class="text-decoration-none text-uppercase">
                                     Nutrition
                                 </a>
                             </li>
                             <li class="menu-item position-relative pointer mx-2 mx-xxl-3 align-content-center">
-                                <a href="#!" class="text-decoration-none text-uppercase">
+                                <a href="category-single.html" class="text-decoration-none text-uppercase">
                                     Health & Wellness
                                 </a>
                             </li>
                             <li class="menu-item position-relative pointer mx-2 mx-xxl-3 align-content-center">
-                                <a href="#!" class="text-decoration-none text-uppercase">
+                                <a href="category-single.html" class="text-decoration-none text-uppercase">
                                     Beauty
                                 </a>
                             </li>
                             <li class="menu-item position-relative pointer mx-2 mx-xxl-3 align-content-center">
-                                <a href="#!" class="text-decoration-none text-uppercase">
+                                <a href="/" class="text-decoration-none text-uppercase">
                                     Home
                                 </a>
                             </li>
                             <li class="menu-item position-relative pointer mx-2 mx-xxl-3 align-content-center">
-                                <a href="#!" class="text-decoration-none text-uppercase">
+                                <a href="category-single.html" class="text-decoration-none text-uppercase">
                                     Interior
                                 </a>
                             </li>
                             <li class="menu-item position-relative pointer mx-2 mx-xxl-3 align-content-center">
-                                <a href="#!" class="text-decoration-none text-uppercase">
+                                <a href="category-single.html" class="text-decoration-none text-uppercase">
                                     All Topics
                                 </a>
                             </li>
@@ -111,14 +122,12 @@
     <main>
         <!-- SPLIDE -->
         <section>
-            <div class="container mt-md-5">
-                <div class="splide" id="image-slider">
+            <div class="container mt-5">
+                <div class="splide px-3 px-sm-0" id="image-slider">
                     <div class="splide__track">
                         <ul class="splide__list">
-
-
                             <li class="main-splide splide__slide text-center">
-                                <img class="img-fluid" width="600px" height="250px"
+                                <img class="object-fit-cover" width="600px" height="250px"
                                     src="https://thegoodfinds.co/wp-content/uploads/2023/02/Albany-Park-Sectional-e1678729182365.webp"
                                     alt="Image 2">
                                 <div
@@ -126,15 +135,15 @@
                                     <div class="caption h-100 w-100 position-relative">
                                         <div class="position-absolute h-100 bottom-0 start-0 w-100">
                                             <div
-                                                class="overflow-hidden my-2 animate-1 d-flex justify-content-center align-items-center">
+                                                class="overflow-hidden mt-2 mb-1 mb-md-2 animate-1 d-flex justify-content-center align-items-center">
                                                 <div class="left-animate mx-3"></div>
-                                                <p class="font-mono text-uppercase">Home, Interior</p>
+                                                <p class="font-mono text-uppercase text-truncate">Home, Interior</p>
                                                 <div class="right-animate mx-3"></div>
                                             </div>
                                             <div class="overflow-hidden my-2 animate-2">
-                                                <h2 class="font-gara">Another Park</h2>
+                                                <h2 class="font-gara text-ellipsis-3">Another Park</h2>
                                             </div>
-                                            <div class="overflow-hidden my-2 animate-3">
+                                            <div class="d-none d-sm-block overflow-hidden my-2 animate-3">
                                                 <p class="font-mono text-uppercase">March 2, 2023 | by TheGoodFinds</p>
                                             </div>
                                         </div>
@@ -142,7 +151,56 @@
                                 </div>
 
                             </li>
+                            <li class="main-splide splide__slide text-center">
+                                <img class="object-fit-cover" width="600px" height="250px"
+                                    src="https://thegoodfinds.co/wp-content/uploads/2023/02/Albany-Park-Sectional-e1678729182365.webp"
+                                    alt="Image 2">
+                                <div
+                                    class="position-absolute w-100 bottom-0 start-0 splide-inner-absolute d-flex flex-column justify-content-end">
+                                    <div class="caption h-100 w-100 position-relative">
+                                        <div class="position-absolute h-100 bottom-0 start-0 w-100">
+                                            <div
+                                                class="overflow-hidden mt-2 mb-1 mb-md-2 animate-1 d-flex justify-content-center align-items-center">
+                                                <div class="left-animate mx-3"></div>
+                                                <p class="font-mono text-uppercase text-truncate">Home, Interior</p>
+                                                <div class="right-animate mx-3"></div>
+                                            </div>
+                                            <div class="overflow-hidden my-2 animate-2">
+                                                <h2 class="font-gara text-ellipsis-3">Another Park</h2>
+                                            </div>
+                                            <div class="d-none d-sm-block overflow-hidden my-2 animate-3">
+                                                <p class="font-mono text-uppercase">March 2, 2023 | by TheGoodFinds</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
+                            </li>
+                            <li class="main-splide splide__slide text-center">
+                                <img class="object-fit-cover" width="600px" height="250px"
+                                    src="https://thegoodfinds.co/wp-content/uploads/2023/02/Albany-Park-Sectional-e1678729182365.webp"
+                                    alt="Image 2">
+                                <div
+                                    class="position-absolute w-100 bottom-0 start-0 splide-inner-absolute d-flex flex-column justify-content-end">
+                                    <div class="caption h-100 w-100 position-relative">
+                                        <div class="position-absolute h-100 bottom-0 start-0 w-100">
+                                            <div
+                                                class="overflow-hidden mt-2 mb-1 mb-md-2 animate-1 d-flex justify-content-center align-items-center">
+                                                <div class="left-animate mx-3"></div>
+                                                <p class="font-mono text-uppercase text-truncate">Home, Interior</p>
+                                                <div class="right-animate mx-3"></div>
+                                            </div>
+                                            <div class="overflow-hidden my-2 animate-2">
+                                                <h2 class="font-gara text-ellipsis-3">Another Park</h2>
+                                            </div>
+                                            <div class="d-none d-sm-block overflow-hidden my-2 animate-3">
+                                                <p class="font-mono text-uppercase">March 2, 2023 | by TheGoodFinds</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </li>
                             <!-- Add more slides as needed -->
                         </ul>
                     </div>
@@ -151,18 +209,18 @@
         </section>
         <!-- SPLIDE -->
         <!-- TRENDING NOW -->
-        <section class="pt-md-5">
-            <div class="bg-beige my-md-5 py-md-4">
-                <div class="container ">
+        <section class="pt-3 pt-md-5">
+            <div class="bg-beige my-5 py-md-4">
+                <div class="container pt-3 pt-md-0">
                     <h3 class="display-4 fw-light mb-4 text-center font-gara">Trending Now</h3>
-                    <div class="row w-100 justify-content-center m-auto pt-2 pb-2 px-2 px-lg-5 ">
+                    <div class="row w-100 justify-content-center m-auto pt-2 pb-2 px-1 px-lg-5 ">
                         <div class="col-12 col-md-5">
-                            <div class="text-center">
+                            <div class="text-center px-3 px-md-0">
                                 <div>
                                     <img class="img-fluid" src="assets/images/blogs/summer.webp" alt="">
                                 </div>
                                 <div>
-                                    <p class="text-beiger font-mono">HOLIDAY SALES</p>
+                                    <p class="text-beiger font-mono mb-1 mb-md-3">HOLIDAY SALES</p>
                                     <p class="font-gara fs-4 px-lg-5 fw-lighter text-ellipsis-3">Sizzling Summer
                                         Savings: Must-Have
                                         Products to Beat the Heat
@@ -173,12 +231,12 @@
                             </div>
                         </div>
                         <div class="col-12 col-md-5">
-                            <div class="text-center">
+                            <div class="text-center px-3 px-md-0">
                                 <div>
                                     <img class="img-fluid" src="assets/images/blogs/summer.webp" alt="">
                                 </div>
                                 <div>
-                                    <p class="text-beiger font-mono">HOLIDAY SALES</p>
+                                    <p class="text-beiger font-mono mb-1 mb-md-3">HOLIDAY SALES</p>
                                     <p class="font-gara fs-4 px-lg-5 fw-lighter text-ellipsis-3">Sizzling Summer
                                         Savings: Must-Have
                                         Products to Beat the Heat
@@ -196,10 +254,10 @@
         <!-- LATEST -->
         <section>
             <div class="container">
-                <h4 class="display-5 fw-light mb-md-5 text-center font-gara">The Latest Finds</h4>
+                <h4 class="display-5 fw-light mb-md-5 text-center font-gara mb-3">The Latest Finds</h4>
                 <div class="row m-auto w-100 px-lg-5">
                     <div class="col-12 col-md-4 mb-3">
-                        <div class="text-center">
+                        <div class="text-center px-3 px-md-0">
                             <div>
                                 <img class="img-fluid" src="assets/images/blogs/nzxt.webp" alt="bloger">
                             </div>
@@ -216,7 +274,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-4 mb-3">
-                        <div class="text-center">
+                        <div class="text-center px-3 px-md-0">
                             <div>
                                 <img class="img-fluid" src="assets/images/blogs/nzxt.webp" alt="bloger">
                             </div>
@@ -233,7 +291,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-4 mb-3">
-                        <div class="text-center">
+                        <div class="text-center px-3 px-md-0">
                             <div>
                                 <img class="img-fluid" src="assets/images/blogs/nzxt.webp" alt="bloger">
                             </div>
@@ -250,7 +308,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-4 mb-3">
-                        <div class="text-center">
+                        <div class="text-center px-3 px-md-0">
                             <div>
                                 <img class="img-fluid" src="assets/images/blogs/nzxt.webp" alt="bloger">
                             </div>
@@ -267,7 +325,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-4 mb-3">
-                        <div class="text-center">
+                        <div class="text-center px-3 px-md-0">
                             <div>
                                 <img class="img-fluid" src="assets/images/blogs/nzxt.webp" alt="bloger">
                             </div>
@@ -284,7 +342,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-4 mb-3">
-                        <div class="text-center">
+                        <div class="text-center px-3 px-md-0">
                             <div>
                                 <img class="img-fluid" src="assets/images/blogs/nzxt.webp" alt="bloger">
                             </div>
@@ -308,9 +366,10 @@
         <section>
             <div class="my-3 my-md-4">
                 <div class="container">
-                    <h5 class="display-5 fw-light mb-4 text-center font-gara">About Us</h5>
-                    <h6 class="display-6 fw-light mb-4 text-center font-gara">Hi, We are The Good Finds!</h6>
-                    <p class="col-11 px-0 m-auto text-center text-secondary fs-5">A daily lifestyle site that covers
+                    <h5 class="display-5 fw-light mb-3 mb-md-4 text-center font-gara">About Us</h5>
+                    <h6 class="display-6 fw-light mb-3 mb-md-4 text-center font-gara">Hi, We are The Good Finds!</h6>
+                    <p class="col-11 px-2 px-md-0 m-auto text-center text-secondary fs-5 ">A daily lifestyle site that
+                        covers
                         style, culture, health and wellness, food, travel,
                         relationships,
                         and more. Our team writes about the latest trends, products, and experiences that cross our
@@ -325,14 +384,15 @@
             <div class="py-md-5 py-3 mb-3 mb-md-5" style="background: #FAF9F7;">
                 <div class="container">
                     <p class="fs-2 fw-light mb-1 text-center font-gara">Join Our Mailing List</p>
-                    <p class="fs-5 fw-light mb-3 text-center font-gara">Get early access to exclusive deals, editors'
+                    <p class="fs-5 fw-light mb-3 text-center font-gara text-secondary">Get early access to exclusive
+                        deals, editors'
                         picks and new launches.</p>
                     <div
                         class="pointer col-lg-10 m-auto d-flex justify-content-between align-items-center bg-white px-2 py-2 ">
                         <div class="w-100">
                             <input style="height:38px" placeholder="Subscribe..."
                                 class="pointer subs-input ps-3 w-100 bg-transparent rounded-0 shadow-none outline-none border-0"
-                                type="search" name="subs" id="subs">
+                                type="email" name="subs" id="subs">
                         </div>
                         <div>
                             <button class="px-2 bg-transparent rounded-0 shadow-none outline-none border-0">
@@ -350,7 +410,7 @@
         <!-- SUBSCRIBE -->
     </main>
     <footer class="pt-md-5">
-        <div class="container-fluid pt-3 pb-3 pt-md-5" style='background: #1B1B1B;'>
+        <div class="container-fluid pt-4 pb-3 pt-md-5" style='background: #1B1B1B;'>
             <div class="py-md-5 col-xl-3 col-lg-5 col-md-7 col-12 px-xxl-4 text-center m-auto">
                 <p class="font-gara fs-5 mb-md-5 text-light">Affiliate Disclaimer</p>
                 <p class="fs-5 font-gara text-light text-start">The display of third-party trademarks and trade names on
@@ -360,12 +420,12 @@
                     affiliation or endorsement of TheGoodFinds.co.
                     If you click a merchant link and buy a product or service on their website, we may be paid a fee by
                     the merchant.</p>
-                <div class="pointer m-auto d-flex justify-content-between align-items-center mt-md-5 px-2 py-2 "
+                <div class="pointer m-auto d-flex justify-content-between align-items-center mt-4 mt-md-5 px-2 py-2 "
                     style="background: #2B2B2B;">
                     <div class="w-100">
                         <input style="height:38px" placeholder="Subscribe..."
                             class="pointer text-white subs-input ps-3 w-100 bg-transparent rounded-0 shadow-none outline-none border-0"
-                            type="search" name="subs" id="subs">
+                            type="email" name="subs" id="subs">
                     </div>
                     <div>
                         <button class="px-2 bg-transparent rounded-0 shadow-none outline-none border-0">
@@ -378,7 +438,7 @@
                     </div>
                 </div>
             </div>
-            <div class="border-top border-secondary text-center pt-3">
+            <div class="border-top border-secondary text-center pt-3 mt-4 mt-md-0">
                 <p class="font-gara brighter pb-md-5"> © 2024 The Good Finds, All Rights Reserved. Read our <a href="#!"
                         class="underliner brighter brighter-hover">Privacy Policy</a> and <a href="#!"
                         class="underliner brighter brighter-hover">Terms and
@@ -395,8 +455,8 @@
                 </a>
             </div>
         </div>
-        <div class="position-fixed bottom-0 end-0 p-md-4 pb-md-5 mb-xl-5">
-            <div class="topper pointer">
+        <div class="position-fixed bottom-0  end-0 p-4 pb-md-5 mb-xl-5">
+            <div class="topper pointer" id="btn-back-to-top" style="visibility: hidden; opacity:0">
                 <div>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20" height="20" fill="#CFAC9F">
                         <path
@@ -406,7 +466,6 @@
             </div>
         </div>
     </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script src="assets/js/app.js"></script>
     <!-- Bootstrap JavaScript Libraries -->
@@ -418,7 +477,6 @@
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
     <script>
-
         new Splide('#image-slider', {
             type: 'loop',
             perPage: 1,
@@ -427,12 +485,29 @@
             pagination: false,
             arrows: false,
             fixedHeight: 400,
+            speed: 1500,
             //fixedWidth:600,
             //gap:20,
             padding: 342,
             breakpoints: {
+                575: {
+                    autoHeight: true,
+                    fixedHeight: 292,
+                    gap: 10,
+                },
+                767: {
+                    fixedHeight: 310,
+                    padding: 0,
+                    gap: 10,
+
+                },
+                991: {
+                    fixedHeight: 310,
+                    padding: 42,
+
+                },
                 1199: {
-                    fixedHeight: 300,
+                    fixedHeight: 320,
                     padding: 162
                 },
                 1399: {
@@ -440,10 +515,6 @@
                 },
             }
         }).mount();
-
-
-
-
     </script>
 
 </body>

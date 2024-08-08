@@ -19,5 +19,46 @@ addEventListener("DOMContentLoaded", () => {
     });
   }
   //CLOSE NAV ON BODY
-    
+  const mybutton = document.getElementById("btn-back-to-top");
+  if (mybutton) {
+    window.onscroll = function () {
+      if (
+        document.body.scrollTop > 350 ||
+        document.documentElement.scrollTop > 350
+      ) {
+        mybutton.style.visibility = "visible";
+        mybutton.style.opacity = 1;
+      } else {
+        mybutton.style.visibility = "hidden";
+        mybutton.style.opacity = 0;
+      }
+    };
+    mybutton.addEventListener("click", () => {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    });
+  }
+
+  const navbar = document.querySelector(".navbar");
+
+  // scroll position / direction
+  let lastScrollTop = 0;
+
+  window.addEventListener("scroll", function () {
+    // current scroll posi
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    // scrolling up or down
+    if (scrollTop > lastScrollTop) {
+      // down, hide the navbar
+      navbar.style.top = "-80px"; // nabbar height
+    } else {
+      // up, show the navbar
+      navbar.style.top = "0";
+    }
+
+    // Update position
+    lastScrollTop = scrollTop;
+  });
+  
 });
