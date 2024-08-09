@@ -38,6 +38,15 @@ addEventListener("DOMContentLoaded", () => {
       document.documentElement.scrollTop = 0;
     });
   }
+  //CLOSE NAV ON BODY
+  // CHANGE BACK TO TOP  SVG BACK TO NORMAL
+  mybutton.addEventListener("click", () => {
+    (innerdiv = mybutton.getElementsByTagName("div")[0]),
+      (innersvg = innerdiv.getElementsByTagName("svg")[0]),
+      (innersvg.style.transform = "translateY(0)");
+    innersvg.style.transform = "";
+  });
+  // CHANGE BACK TO TOP  SVG BACK TO NORMAL
 
   const navbar = document.querySelector(".navbar");
 
@@ -56,9 +65,7 @@ addEventListener("DOMContentLoaded", () => {
       // up, show the navbar
       navbar.style.top = "0";
     }
-
     // Update position
     lastScrollTop = scrollTop;
   });
-  
 });

@@ -3,6 +3,15 @@
 } */
 
 /* DEFAULT CLASSES */
+::selection {
+  color: white;
+  background: #cfac9f;
+}
+::-moz-selection {
+  color: white;
+  background: #cfac9f;
+}
+
 body {
   font-family: Arial, sans-serif;
   min-height: 100vh;
@@ -29,11 +38,23 @@ main {
 .pointer {
   cursor: pointer;
 }
+.text-base {
+  color: rgb(50, 55, 56, 1) !important;
+}
+.fs-11px {
+  font-size: 11px;
+}
 .fs-12px {
   font-size: 12px;
 }
 .fs-14px {
-  font-size: 12px;
+  font-size: 14px;
+}
+.fs-16px {
+  font-size: 16px;
+}
+.fw-kindabold{
+  font-weight: 550;
 }
 .font-gara {
   font-family: "Cormorant Garamond";
@@ -55,6 +76,9 @@ main {
   overflow: hidden !important;
   text-overflow: ellipsis !important;
   display: -webkit-box !important;
+}
+.x-small {
+  font-size: x-small !important;
 }
 /* DEFAULT CLASSES */
 /* --------------------------------------------- */
