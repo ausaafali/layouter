@@ -1,7 +1,15 @@
 /* *{
 
 } */
-
+/* VARS */
+:root {
+  --cardbordercolor: #d78c29;
+  --cardbgtag: #f9f3ea;
+  --blueish: #344a9a;
+  --blueishtext: #5878ee;
+  --pinkish: #aa0f6d;
+}
+/* VARS */
 /* DEFAULT CLASSES */
 ::selection {
   color: white;
@@ -13,12 +21,15 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: Albert-Sans, sans-serif;
   min-height: 100vh;
   /* min-width: 100vw; */
 }
 main {
   margin-top: 100px;
+}
+.w-fit-content {
+  width: fit-content;
 }
 .bg-beige {
   background: #f2ece0;
@@ -41,11 +52,17 @@ main {
 .text-base {
   color: rgb(50, 55, 56, 1) !important;
 }
+.text-smallgrey {
+  color: rgb(114 117 116);
+}
 .fs-11px {
   font-size: 11px;
 }
 .fs-12px {
   font-size: 12px;
+}
+.fs-13px {
+  font-size: 13px;
 }
 .fs-14px {
   font-size: 14px;
@@ -53,7 +70,13 @@ main {
 .fs-16px {
   font-size: 16px;
 }
-.fw-kindabold{
+.fs-19px {
+  font-size: 19px;
+}
+.fs-27px {
+  font-size: 27px;
+}
+.fw-kindabold {
   font-weight: 550;
 }
 .font-gara {
@@ -139,7 +162,7 @@ main {
   font-weight: 500;
 }
 .navbar-insta {
-  transition: transform 0.3s ease;
+  transition: transform 0.7s ease;
 }
 .navbar-input {
   transition: all 0.2s ease;
@@ -361,6 +384,62 @@ main {
 }
 /* CATEGORY SINGLE */
 /* --------------------------------------------- */
+/* BLOG SINGLE */
+.card-main {
+  border: 1px solid var(--cardbordercolor);
+}
+
+.card-tagline {
+  border: 1px dashed var(--cardbordercolor);
+  background: var(--cardbgtag);
+}
+.rater {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.card-btn {
+  background-color: var(--blueish);
+  width: 170px;
+  height: 40px;
+  box-shadow: 3px 3px 5px rgba(128, 128, 128, 0.521) !important;
+}
+.card-btn:hover {
+  background-color: #3b55b1;
+  box-shadow: -3px 3px 10px rgba(128, 128, 128, 0.521) !important;
+}
+.card-btn:active {
+  filter: brightness(0.8);
+  background-color: #3b55b1 !important;
+  box-shadow: none !important;
+}
+.under-btn {
+  color: var(--blueishtext);
+  /* font-family: ; */
+}
+.bg-pinkish {
+  background: var(--pinkish);
+}
+/* BLOG SINGLE */
+
 /* --------------------------------------------- */
+/* CATEGORY SINGLE */
+.star-rating {
+  /* padding: 0 0.2em; */
+  width: 5em;
+}
+
+.star-rating label {
+  color: #ccc;
+  cursor: pointer;
+}
+
+.star-rating :checked ~ label {
+  color: #f90;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  color: #fc0;
+}
+/* CATEGORY SINGLE */
 /* --------------------------------------------- */
 /* --------------------------------------------- */
