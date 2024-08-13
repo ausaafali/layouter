@@ -8,6 +8,7 @@
   --blueish: #344a9a;
   --blueishtext: #5878ee;
   --pinkish: #aa0f6d;
+  --customgrey: #616161;
 }
 /* VARS */
 /* DEFAULT CLASSES */
@@ -29,13 +30,29 @@ main {
   margin-top: 100px;
 }
 .w-fit-content {
-  width: fit-content;
+  width: fit-content !important;
 }
 .bg-beige {
   background: #f2ece0;
 }
+.accordion-button::after {
+  margin-left: 0 !important;
+}
+.text-grey {
+  color: var(--customgrey);
+}
+.bg-grey {
+  background:  #F5F7FC;
+}
 .text-beiger {
   color: #d6aca7;
+}
+.px-20px{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.lh--sm {
+  line-height: 10px;
 }
 .outline-none {
   outline: none !important;
@@ -72,6 +89,9 @@ main {
 }
 .fs-19px {
   font-size: 19px;
+}
+.fs-21px {
+  font-size: 21px;
 }
 .fs-27px {
   font-size: 27px;
@@ -388,7 +408,31 @@ main {
 .card-main {
   border: 1px solid var(--cardbordercolor);
 }
-
+.card-inner {
+  height: 158px;
+}
+.card-imger {
+  width: 145px;
+  height: 98px;
+  object-position: center center;
+  object-fit: cover;
+}
+@media screen and (max-width: 767px) {
+  .card-inner {
+    height: auto;
+  }
+  .card-main {
+    width: 430px;
+  }
+}
+@media screen and (max-width: 482px) {
+  .card-main {
+    width: 100%;
+  }
+  .card-imger {
+    width: 100%;
+  }
+}
 .card-tagline {
   border: 1px dashed var(--cardbordercolor);
   background: var(--cardbgtag);
@@ -411,6 +455,16 @@ main {
   background-color: #3b55b1 !important;
   box-shadow: none !important;
 }
+@media screen and (max-width: 420px) {
+  .card-btn {
+    width: 110px;
+    height: 35px;
+    font-size: 12px;
+  }
+  .under-btn > a > p {
+    font-size: 12px;
+  }
+}
 .under-btn {
   color: var(--blueishtext);
   /* font-family: ; */
@@ -418,6 +472,24 @@ main {
 .bg-pinkish {
   background: var(--pinkish);
 }
+.popular-div {
+  border-radius: 0px 0px 14px 14px;
+}
+@media (min-width: 768px) {
+  .popular-div {
+    border-radius: 12px 0px 12px 0px;
+  }
+}
+.gaper{
+  gap: 38px;
+}
+@media (max-width: 400px) {
+  .gaper{
+    gap: 8px;
+  }
+
+}
+
 /* BLOG SINGLE */
 
 /* --------------------------------------------- */
@@ -440,6 +512,27 @@ main {
 .star-rating label:hover ~ label {
   color: #fc0;
 }
+.sharer-child1 {
+  opacity: 0;
+  transform: translateX(15px);
+  transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.sharer-child2 {
+  pointer-events: none;
+  transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.sharer-parent:hover {
+  .sharer-child1 {
+    transform: translateX(0);
+    opacity: 1 !important;
+  }
+}
+.sharer-parent:hover {
+  .sharer-child2 {
+    opacity: 0;
+  }
+}
 /* CATEGORY SINGLE */
+
 /* --------------------------------------------- */
 /* --------------------------------------------- */
