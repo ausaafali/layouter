@@ -1,23 +1,39 @@
-addEventListener("DOMContentLoaded", () => {
-  // MEDIA QUERIED FUNCTION
+document.addEventListener("DOMContentLoaded", () => {
   if (window.screen.width > 991) {
     const menuItems = document.querySelectorAll(".menu-item");
     const underline = document.querySelector(".underline");
-    console.log(window.screen.width);
+    let activeItem = document.querySelector(".menu-item.active-menu-item");
 
+    // Function to update underline position
+    function updateUnderline(item) {
+      const itemRect = item.getBoundingClientRect();
+      const navRect = item.parentElement.getBoundingClientRect();
+      underline.style.width = `${itemRect.width}px`;
+      underline.style.left = `${itemRect.left - navRect.left}px`;
+    }
+
+    // Set the underline to the active item by default
+    if (activeItem) {
+      updateUnderline(activeItem);
+    }
+
+    // Handle mouse enter
     menuItems.forEach((item) => {
       item.addEventListener("mouseenter", (e) => {
-        const itemRect = e.target.getBoundingClientRect();
-        const navRect = e.target.parentElement.getBoundingClientRect();
-        underline.style.width = `${itemRect.width}px`;
-        underline.style.left = `${itemRect.left - navRect.left}px`;
+        updateUnderline(e.target);
       });
 
+      // Handle mouse leave
       item.addEventListener("mouseleave", () => {
-        underline.style.width = "0";
+        if (activeItem) {
+          updateUnderline(activeItem);
+        } else {
+          underline.style.width = "0";
+        }
       });
     });
   }
+
   //CLOSE NAV ON BODY
   const mybutton = document.getElementById("btn-back-to-top");
   if (mybutton) {
