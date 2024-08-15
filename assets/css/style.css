@@ -96,6 +96,9 @@ main {
 .fs-27px {
   font-size: 27px;
 }
+.fs-32px {
+  font-size: 32px;
+}
 .fw-kindabold {
   font-weight: 550;
 }
@@ -112,6 +115,13 @@ main {
 }
 .font-mont {
   font-family: Montserrat;
+}
+.text-ellipsis-2 {
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  display: -webkit-box !important;
 }
 .text-ellipsis-3 {
   -webkit-line-clamp: 3 !important;
